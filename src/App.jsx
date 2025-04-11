@@ -1,6 +1,20 @@
 import React, { useState } from "react";
-import { FaHiking, FaJava, FaPython, FaReact, FaDocker, FaGoogle, FaHtml5, FaCss3Alt, FaJs, FaCloud } from "react-icons/fa";
-import { SiFlutter, SiFirebase, SiKubernetes, SiPostgresql, SiMysql } from "react-icons/si";
+import {
+  FaHiking,
+  FaJava,
+  FaPython,
+  FaReact,
+  FaDocker,
+  FaGoogle,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaCloud,
+  FaLinkedin,
+  FaGithub,
+  FaFileDownload
+} from "react-icons/fa";
+import { SiFlutter, SiFirebase, SiKubernetes, SiPostgresql, SiMysql, SiLeetcode,SiDuolingo } from "react-icons/si";
 import { GiTreehouse } from "react-icons/gi";
 import { motion } from "framer-motion";
 
@@ -41,11 +55,40 @@ const skills = [
   { name: "CSS", icon: <FaCss3Alt /> },
 ];
 
-export default function App() {
+export default function Portfolio() {
   const [hasHovered, setHasHovered] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-200 via-green-100 to-green-300 font-sans overflow-x-hidden scroll-smooth">
+      {/* Sticky Header Navigation with Logo */}
+      <header className="sticky top-0 bg-gradient-to-br from-green-200 via-green-100 to-green-300 text-green-900 py-4 px-6 shadow-lg border-b border-green-300 z-50">
+        <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
+          <div className="relative w-12 h-12 rounded-full bg-green-600 shadow-md overflow-hidden flex items-center justify-center">
+            <FaHiking className="absolute text-green-200 text-3xl opacity-40" />
+            <span className="text-white font-bold text-xl z-10">D</span>
+          </div>
+          <nav className="flex gap-6 text-base font-semibold items-center">
+            <a href="#intro" className="hover:text-green-800">Home</a>
+            <a href="#about" className="hover:text-green-800">About Me</a>
+            <a href="#projects" className="hover:text-green-800">Work</a>
+            <a href="#skills" className="hover:text-green-800">Skills</a>
+            <a href="#Certifications" className="hover:text-gren-800">Certifications</a>
+            <a href="#connect" className="hover:text-green-800">Connect</a>
+            <motion.a
+              href="/Diwakar's Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-800 hover:text-green-600 text-xl"
+              title="View Resume"
+              whileHover={{ rotate: 20, scale: 1.2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <FaFileDownload />
+            </motion.a>
+          </nav>
+        </div>
+      </header>
+
       {/* Animated Tree Background */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
         {[...Array(10)].map((_, i) => (
@@ -62,6 +105,7 @@ export default function App() {
           </motion.div>
         ))}
       </div>
+         
 
       {/* Page 1: Introduction */}
       <section id="intro" className="min-h-screen flex justify-center items-center text-center px-4 relative z-10">
@@ -86,6 +130,16 @@ export default function App() {
             </motion.p>
           )}
         </div>
+      </section>
+
+      {/* About Page */}
+      <section id="about" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
+        <h2 className="text-3xl font-bold text-center text-green-900 mb-10">
+          About Me 🍃
+        </h2>
+        <p className="text-lg max-w-2xl text-green-800 text-center">
+          I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives.
+        </p>
       </section>
 
       {/* Page 2: Projects */}
@@ -133,7 +187,8 @@ export default function App() {
             <motion.div
               key={i}
               whileHover={{ scale: 1.2, rotate: 5 }}
-              className="w-40 h-40 flex items-center justify-center text-[9rem] text-green-800 bg-white rounded-full shadow hover:bg-green-100 cursor-pointer"
+              className="w-40 h-40 flex items-center justify-center text-[6rem] text-green-800 bg-white rounded-full shadow hover:bg-green-100 cursor-pointer"
+              title={skill.name}
             >
               {skill.icon}
             </motion.div>
@@ -141,12 +196,42 @@ export default function App() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-10 text-green-700 relative z-10">
-        <p>Let’s hike through code together! 🚀🌲</p>
-        <button className="mt-4 bg-green-700 text-white px-4 py-2 rounded-xl hover:bg-green-800">
-          Contact Me
-        </button>
+      {/* Certifications Section */}
+      <section id="certifications" className="min-h-screen py-20 px-6 relative z-10">
+        <h2 className="text-3xl font-bold text-green-900 mb-10 text-center">Certifications 🏅</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+          <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+            <h3 className="text-xl font-semibold text-green-800">Embedded Systems - Arm</h3>
+            <p className="text-sm text-gray-700 mt-2">In-depth knowledge of embedded programming using Arm architecture.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+            <h3 className="text-xl font-semibold text-green-800">STM32 Microcontroller</h3>
+            <p className="text-sm text-gray-700 mt-2">Hands-on learning with Arm-based STM32 microcontrollers and real-world circuits.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+            <h3 className="text-xl font-semibold text-green-800">FPGA & Digital Design</h3>
+            <p className="text-sm text-gray-700 mt-2">Training on Xilinx FPGA flow and RTL-based design for hardware systems.</p>
+          </div>
+        </div>
+      </section> 
+
+      {/* Connect Page */}
+      <footer className="text-center py-10 text-green-700 relative z-10" id="connect">
+        <h2 className="text-3xl font-bold text-green-900 mb-6">Let's Connect 🌐</h2>
+        <div className="flex justify-center gap-6 text-4xl">
+          <a href="https://www.linkedin.com/in/diwakar-rai-15593a24b" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/DkGoat66" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
+            <FaGithub />
+          </a>
+          <a href="https://leetcode.com/u/DkGoat66/" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
+            <SiLeetcode />
+          </a>
+          <a href="https://www.duolingo.com/profile/DrTuPW" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
+            <SiDuolingo/>
+          </a>
+        </div>
       </footer>
     </div>
   );
