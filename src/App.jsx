@@ -205,7 +205,7 @@ export default function Portfolio() {
             <p className="text-sm text-gray-700 mt-2">///</p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-green-800">AWS</h3>
+            <h3 className="text-xl font-semibold text-green-800">AWS Certified Developer Associate</h3>
             <p className="text-sm text-gray-700 mt-2"></p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
