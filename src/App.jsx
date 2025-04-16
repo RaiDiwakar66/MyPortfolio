@@ -14,9 +14,18 @@ import {
   FaGithub,
   FaFileDownload
 } from "react-icons/fa";
-import { SiFlutter, SiFirebase, SiKubernetes, SiPostgresql, SiMysql, SiLeetcode,SiDuolingo } from "react-icons/si";
+import {
+  SiFlutter,
+  SiFirebase,
+  SiKubernetes,
+  SiPostgresql,
+  SiMysql,
+  SiLeetcode,
+  SiDuolingo
+} from "react-icons/si";
 import { GiTreehouse } from "react-icons/gi";
 import { motion } from "framer-motion";
+import KSU from "./assets/ksu-logo.png";
 
 const projects = [
   {
@@ -72,7 +81,7 @@ export default function Portfolio() {
             <a href="#about" className="hover:text-green-800">About Me</a>
             <a href="#projects" className="hover:text-green-800">Work</a>
             <a href="#skills" className="hover:text-green-800">Skills</a>
-            <a href="#Certifications" className="hover:text-gren-800">Certifications</a>
+            <a href="#certifications" className="hover:text-green-800">Certifications</a>
             <a href="#connect" className="hover:text-green-800">Connect</a>
             <motion.a
               href="/Diwakar's Resume.pdf"
@@ -105,9 +114,8 @@ export default function Portfolio() {
           </motion.div>
         ))}
       </div>
-         
 
-      {/* Page 1: Introduction */}
+      {/* Introduction Section */}
       <section id="intro" className="min-h-screen flex justify-center items-center text-center px-4 relative z-10">
         <div>
           <motion.h1
@@ -118,7 +126,6 @@ export default function Portfolio() {
           >
             Hi, I'm Diwakar Rai 🌿
           </motion.h1>
-
           {hasHovered && (
             <motion.p
               className="text-lg max-w-2xl text-green-800 mx-auto"
@@ -132,11 +139,10 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* About Page */}
+      {/* About Section */}
       <section id="about" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
-        <h2 className="text-3xl font-bold text-center text-green-900 mb-10">
-          About Me 🍃
-        </h2>
+        <h2 className="text-3xl font-bold text-center text-green-900 mb-10">About Me 🍃</h2>
+        <img src={KSU} alt="KSU Logo" className="w-40 mb-6" />
         <p className="text-lg max-w-2xl text-green-800 text-center">
           I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives.
         </p>
