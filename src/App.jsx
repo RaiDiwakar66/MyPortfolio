@@ -47,6 +47,12 @@ const projects = [
       "Python app built in collaboration with UGA to enhance memory retention through structured check-ins and CI/CD pipeline.",
     tech: ["Python", "CI/CD", "User Testing"],
   },
+  {
+    title: "Calculator-Web-Application",
+    description:
+    "C# Calculator-web-based application that utilizes Nunit for Unit Testing and Playwright for End-to-End Testing to ensure quality assurance",
+    tech: ["Nunit", "Playwright"],
+  }
 ];
 
 const skills = [
