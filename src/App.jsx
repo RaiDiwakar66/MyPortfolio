@@ -54,6 +54,7 @@ const projects = [
     description:
     "C# Calculator-web-based application that utilizes Nunit for Unit Testing and Playwright for End-to-End Testing to ensure quality assurance",
     tech: ["Nunit", "Playwright"],
+    github: "https://github.com/IbrahimaDiallo32/Calculator-Web-Application"
   }
 ];
 
@@ -186,6 +187,19 @@ export default function Portfolio() {
                     </span>
                   ))}
                 </div>
+                {project.github && (
+                  <div className="mt-4">
+                    <a
+                     href={project.github}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="text-green-800 hover:text-blue-600 hover:underline"
+                     title="Github Repository"
+                    >
+                     <FaGithub/>
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
