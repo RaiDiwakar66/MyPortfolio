@@ -36,18 +36,22 @@ const projects = [
     description:
       "A Flutter-based mobile app with a microservices backend, Firebase integration, and dynamic reminder system to boost mood tracking and user engagement.",
     tech: ["Flutter", "Firebase", "Microservices"],
+    github: "https://github.com/DkGoat66/DopamineTracker"
   },
   {
     title: "Closet Management System",
     description:
       "Java full-stack application with PostgreSQL and real-time weather API for personalized outfit suggestions.",
     tech: ["Java", "PostgreSQL", "RESTful APIs"],
+    github: "https://github.com/DkGoat66/Closet2.0"
   },
   {
     title: "Flashback Memory",
     description:
       "Python app built in collaboration with UGA to enhance memory retention through structured check-ins and CI/CD pipeline.",
     tech: ["Python", "CI/CD", "User Testing"],
+    github:"https://github.com/DkGoat66/Flaskback-Memory"
+    
   },
   {
     title: "Calculator-Web-Application",
