@@ -263,10 +263,10 @@ export default function Portfolio() {
           <a href="https://www.linkedin.com/in/diwakar-rai-15593a24b" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/DkGoat66" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
+          <a href="https://github.com/RaiDiwakar66" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
             <FaGithub />
           </a>
-          <a href="https://leetcode.com/u/DkGoat66/" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
+          <a href="https://leetcode.com/u/Diwakar66/" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
             <SiLeetcode />
           </a>
           <a href="https://www.duolingo.com/profile/DrTuPW" target="_blank" rel="noopener noreferrer" className="hover:text-green-900">
