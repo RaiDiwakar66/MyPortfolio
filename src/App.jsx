@@ -29,6 +29,7 @@ import KSU from "./assets/ksu-logo.png";
 import GenerativeAI from "./assets/GenerativeAI.jpg"
 import BachelorDegree from "./assets/BachelorDegree.png"
 import InProgress from "./assets/Workinprogress.jpg"
+import CalculatorWeb from "./assets/Calculator.png"
 
 const projects = [
   {
@@ -58,7 +59,8 @@ const projects = [
     description:
     "C# Calculator-web-based application that utilizes Nunit for Unit Testing and Playwright for End-to-End Testing to ensure quality assurance",
     tech: ["Nunit", "Playwright"],
-    github: "https://github.com/IbrahimaDiallo32/Calculator-Web-Application"
+    github: "https://github.com/IbrahimaDiallo32/Calculator-Web-Application",
+    image: CalculatorWeb
   }
 ];
 
@@ -175,6 +177,7 @@ export default function Portfolio() {
               transition={{ type: "spring", stiffness: 200 }}
             >
               <div className="rounded-2xl shadow-md bg-white p-6">
+              <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-md mb-4"/>
                 <h2 className="text-xl font-semibold text-green-700">
                   {project.title}
                 </h2>
