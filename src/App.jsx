@@ -159,7 +159,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
         <h2 className="text-3xl font-bold text-center text-green-900 mb-10">About Me 🍃</h2>
-        <img src={Diwakar} alt="Diwakar Picture" className="w-full h-40 object-cover rounded-md mb-4"/>
+        <img src={Diwakar} alt="Diwakar Picture" className="w-40 rounded-md mb-4"/>
         <img src={KSU} alt="KSU Logo" className="w-40 mb-6" />
         <p className="text-lg max-w-2xl text-green-800 text-center">
           I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives.Checkout my projects! 
