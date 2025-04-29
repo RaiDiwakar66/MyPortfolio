@@ -159,7 +159,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
         <h2 className="text-3xl font-bold text-center text-green-900 mb-10">About Me 🍃</h2>
-        <img src={Diwakar} alt="Diwakar Picture" className="w-40 rounded-md mb-4"/>
+        <img src={Diwakar} alt="Diwakar Picture" className="w-48 rounded-full shadow-lg mb-6"/>
         <img src={KSU} alt="KSU Logo" className="w-40 mb-6" />
         <p className="text-lg max-w-2xl text-green-800 text-center">
           I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives.Checkout my projects! 
@@ -169,7 +169,7 @@ export default function Portfolio() {
       {/* Page 2: Projects */}
       <section id="projects" className="min-h-screen px-6 py-16 relative z-10">
         <h2 className="text-3xl font-bold text-center text-green-900 mb-10">
-          Projects I've Worked On 🧩
+          Projects I've Worked On 🤩
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
@@ -179,7 +179,13 @@ export default function Portfolio() {
               transition={{ type: "spring", stiffness: 200 }}
             >
               <div className="rounded-2xl shadow-md bg-white p-6">
-              <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-md mb-4"/>
+                <motion.img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-40 object-cover mb-4 rounded" 
+                  whileHover={{ scale: 1.1 }} 
+                  transition={{ duration: 0.5 }}
+                />
                 <h2 className="text-xl font-semibold text-green-700">
                   {project.title}
                 </h2>
@@ -199,13 +205,13 @@ export default function Portfolio() {
                 {project.github && (
                   <div className="mt-4">
                     <a
-                     href={project.github}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     className="text-green-800 hover:text-blue-600 hover:underline"
-                     title="Github Repository"
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-800 hover:text-green-600 text-4xl"
+                      title="GitHub Repository"
                     >
-                     <FaGithub/>
+                      <FaGithub />
                     </a>
                   </div>
                 )}
