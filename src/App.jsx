@@ -165,7 +165,7 @@ export default function Portfolio() {
         <img src={Diwakar} alt="Diwakar Picture" className="w-48 rounded-full shadow-lg mb-6"/>
         <img src={KSU} alt="KSU Logo" className="w-40 mb-6" />
         <p className="text-lg max-w-2xl text-green-800 text-center">
-          I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives.Checkout my projects! 
+          I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives. I love building projects that bring changes in our life. Checkout my projects! 
         </p>
       </section>
 
@@ -185,7 +185,7 @@ export default function Portfolio() {
                 <motion.img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-40 object-cover mb-4 rounded" 
+                  className="w-full h-42 object-cover mb-4 rounded" 
                   whileHover={{ scale: 1.1 }} 
                   transition={{ duration: 0.5 }}
                 />
