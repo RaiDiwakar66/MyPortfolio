@@ -91,11 +91,28 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-green-200 via-green-100 to-green-300 font-sans overflow-x-hidden scroll-smooth">
       {/* Sticky Header Navigation with Logo */}
       <header className="sticky top-0 bg-gradient-to-br from-green-200 via-green-100 to-green-300 text-green-900 py-4 px-6 shadow-lg border-b border-green-300 z-50">
-        <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
-          <div className="relative w-12 h-12 rounded-full bg-green-600 shadow-md overflow-hidden flex items-center justify-center">
-            <FaHiking className="absolute text-green-200 text-3xl opacity-40" />
-            <span className="text-white font-bold text-xl z-10">D</span>
-          </div>
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
+      <motion.div
+        className="relative w-12 h-12 rounded-full bg-green-600 overflow-hidden flex items-center justify-center cursor-pointer"
+        whileHover={{
+        scale: 1.2,
+        boxShadow: "0px 0px 25px 8px rgba(34,197,94,0.7)",
+        rotate: [0, 5, -5, 0],
+        }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        <motion.span
+          className="absolute text-white font-bold text-xl z-20"
+          initial={{ opacity: 1 }}
+          whileHover={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          D
+        </motion.span>
+        <GiTreehouse className="text-green-200 text-3xl z-10" />
+      </motion.div>
+
+
           <nav className="flex gap-6 text-base font-semibold items-center">
             <a href="#intro" className="hover:text-green-800">Home</a>
             <a href="#about" className="hover:text-green-800">About Me</a>
