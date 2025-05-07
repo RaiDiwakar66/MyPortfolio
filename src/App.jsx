@@ -37,7 +37,7 @@ const projects = [
     title: "Dopamine Tracker",
     description:
       "A Flutter-based mobile app with a microservices backend, Firebase integration, and dynamic reminder system to boost mood tracking and user engagement.",
-    tech: ["Flutter", "Firebase", "Microservices"],
+    tech: ["Flutter", "Firebase", "Microservices", "Dart"],
     github: "https://github.com/DkGoat66/DopamineTracker",
     image: InProgress
   },
@@ -180,10 +180,10 @@ export default function Portfolio() {
       <section id="about" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
         <h2 className="text-3xl font-bold text-center text-green-900 mb-10">About Me 🍃</h2>
         <img src={Diwakar} alt="Diwakar Picture" className="w-48 rounded-full shadow-lg mb-6"/>
-        <img src={KSU} alt="KSU Logo" className="w-40 mb-6" />
         <p className="text-lg max-w-2xl text-green-800 text-center">
           I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives. I love building projects that bring changes in our life. Check   out my projects! 
         </p>
+         <img src={KSU} alt="KSU Logo" className="w-40 mb-6" />
       </section>
 
       {/* Page 2: Projects */}
