@@ -62,7 +62,7 @@ const projects = [
     title: "Calculator-Web-Application",
     description:
     "C# Calculator-web-based application that utilizes Nunit for Unit Testing and Playwright for End-to-End Testing to ensure quality assurance",
-    tech: ["Nunit", "Playwright"],
+    tech: ["Nunit", "Playwright","C#"],
     github: "https://github.com/IbrahimaDiallo32/Calculator-Web-Application",
     image: CalculatorWeb
   }
