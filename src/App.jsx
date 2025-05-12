@@ -23,6 +23,7 @@ import {
   SiLeetcode,
   SiDuolingo
 } from "react-icons/si";
+import { IoDocumentText } from "react-icons/io5";
 import { GiTreehouse } from "react-icons/gi";
 import { motion } from "framer-motion";
 import KSU from "./assets/ksu-logo.png";
@@ -129,7 +130,7 @@ export default function Portfolio() {
               whileHover={{ rotate: 20, scale: 1.2 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <FaFileDownload />
+              <IoDocumentText />
             </motion.a>
           </nav>
         </div>
