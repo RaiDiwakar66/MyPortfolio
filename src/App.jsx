@@ -54,7 +54,7 @@ const projects = [
     title: "Flashback Memory",
     description:
       "Python app built in collaboration with UGA to enhance memory retention through structured check-ins and CI/CD pipeline.",
-    tech: ["Python", "CI/CD", "User Testing"],
+    tech: ["Python", "CI/CD", "User Testing", "Django"],
     github:"https://github.com/DkGoat66/Flaskback-Memory",
     image: InProgress
     
