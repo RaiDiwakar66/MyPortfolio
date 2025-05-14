@@ -46,7 +46,7 @@ const projects = [
     title: "Closet Management System",
     description:
       "Java full-stack application with PostgreSQL and real-time weather API for personalized outfit suggestions.",
-    tech: ["Java", "PostgreSQL", "RESTful APIs","JavaScript", "React JS"],
+    tech: ["Java", "PostgreSQL", "RESTful APIs","JavaScript", "React JS","OpenWeatherMap API"],
     github: "https://github.com/DkGoat66/Closet2.0",
     image: InProgress
   },
