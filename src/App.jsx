@@ -70,19 +70,19 @@ const projects = [
 ];
 
 const skills = [
-  { name: "Java", icon: <FaJava /> },
-  { name: "Python", icon: <FaPython /> },
-  { name: "JavaScript", icon: <FaJs /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "Flutter", icon: <SiFlutter /> },
-  { name: "Firebase", icon: <SiFirebase /> },
-  { name: "Docker", icon: <FaDocker /> },
-  { name: "Kubernetes", icon: <SiKubernetes /> },
-  { name: "Google Cloud", icon: <FaGoogle /> },
-  { name: "SQL", icon: <SiMysql /> },
-  { name: "PostgreSQL", icon: <SiPostgresql /> },
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3Alt /> },
+  { name: "Java", icon: <FaJava />, percentage: 85 },
+  { name: "Python", icon: <FaPython />, percentage: 80 },
+  { name: "JavaScript", icon: <FaJs />, percentage: 75 },
+  { name: "React", icon: <FaReact />, percentage: 70 },
+  { name: "Flutter", icon: <SiFlutter />, percentage: 65 },
+  { name: "Firebase", icon: <SiFirebase />, percentage: 60 },
+  { name: "Docker", icon: <FaDocker />, percentage: 60 },
+  { name: "Kubernetes", icon: <SiKubernetes />, percentage: 55 },
+  { name: "Google Cloud", icon: <FaGoogle />, percentage: 50 },
+  { name: "SQL", icon: <SiMysql />, percentage: 75 },
+  { name: "PostgreSQL", icon: <SiPostgresql />, percentage: 70 },
+  { name: "HTML", icon: <FaHtml5 />, percentage: 85 },
+  { name: "CSS", icon: <FaCss3Alt />, percentage: 80 },
 ];
 
 export default function Portfolio() {
@@ -180,7 +180,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
         <h2 className="text-3xl font-bold text-center text-green-900 mb-10">About Me 🍃</h2>
-        <img src={Diwakar} alt="Diwakar Picture" className="w-48 rounded-full shadow-lg mb-6"/>
+        <img src={Diwakar} alt="Diwakar Picture" className="w-48 rounded-full shadow-lg mb-10"/>
         <p className="text-lg max-w-2xl text-green-800 text-center">
           I'm an aspiring software engineer who recently graduated with a Bachelor in Software Engineering from Kennesaw State University. My passion for coding ignited in my senior year of high school when I read an article about how software changes lives. Since that day, I’ve pursued software engineering with the hope of building software that transforms lives. I love building projects that bring changes in our life. Check   out my projects! 
         </p>
@@ -243,23 +243,63 @@ export default function Portfolio() {
       </section>
 
       {/* Page 3: Skills */}
-      <section id="skills" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
-        <h2 className="text-3xl font-bold text-center text-green-900 mb-10">
-          My Skills 🔧
-        </h2>
-        <div className="flex flex-wrap justify-center items-center gap-10">
-          {skills.map((skill, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              className="w-40 h-40 flex items-center justify-center text-[6rem] text-green-800 bg-white rounded-full shadow hover:bg-green-100 cursor-pointer"
-              title={skill.name}
-            >
-              {skill.icon}
-            </motion.div>
-          ))}
-        </div>
-      </section>
+<section id="skills" className="min-h-screen flex flex-col justify-center items-center px-6 py-16 relative z-10">
+  <h2 className="text-3xl font-bold text-center text-green-900 mb-10">
+    My Skills 🔧
+  </h2>
+  <div className="flex flex-wrap justify-center items-center gap-10 ">
+{skills.map((skill, i) => {
+  const radius = 60;
+  const stroke = 8;
+  const normalizedRadius = radius - stroke * 0.5;
+  const circumference = 2 * Math.PI * normalizedRadius;
+  const strokeDashoffset = circumference - (skill.percentage / 100) * circumference;
+
+  return (
+    <div key={i} className="relative group w-48 h-48 flex items-center justify-center">
+      {/* SVG Ring Progress on Hover */}
+      <svg
+        height={radius * 2}
+        width={radius * 2}
+        className="absolute z-10 opacity-0 group-hover:opacity-100 transition duration-500"
+      >
+        <circle
+          stroke="#D1FAE5"
+          fill="transparent"
+          strokeWidth={stroke}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+        />
+        <circle
+          stroke="#047857"
+          fill="transparent"
+          strokeWidth={stroke}
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+          className="transition-all duration-700 ease-out"
+        />
+      </svg>
+
+      {/* Icon - hides on hover */}
+      <div className="z-20 w-32 h-32 rounded-full bg-white shadow flex items-center justify-center text-[4.5rem] text-green-800 transition-opacity duration-300 group-hover:opacity-0">
+        {skill.icon}
+      </div>
+
+      {/* Percentage Text - appears on hover */}
+      <div className="absolute z-30 text-lg font-bold text-green-900 opacity-0 group-hover:opacity-100 transition duration-300">
+        {skill.percentage}%
+      </div>
+    </div>
+  );
+})}
+  </div>
+</section>
+
 
       {/* Certifications Section */}
       <section id="certifications" className="min-h-screen py-20 px-6 relative z-10">
