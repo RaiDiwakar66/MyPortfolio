@@ -70,19 +70,19 @@ const projects = [
 ];
 
 const skills = [
-  { name: "Java", icon: <FaJava />, percentage: 85 },
-  { name: "Python", icon: <FaPython />, percentage: 80 },
-  { name: "JavaScript", icon: <FaJs />, percentage: 75 },
+  { name: "Java", icon: <FaJava />, percentage: 90 },
+  { name: "Python", icon: <FaPython />, percentage: 95 },
+  { name: "JavaScript", icon: <FaJs />, percentage: 85 },
   { name: "React", icon: <FaReact />, percentage: 70 },
-  { name: "Flutter", icon: <SiFlutter />, percentage: 65 },
+  { name: "Flutter", icon: <SiFlutter />, percentage: 85 },
   { name: "Firebase", icon: <SiFirebase />, percentage: 60 },
   { name: "Docker", icon: <FaDocker />, percentage: 60 },
   { name: "Kubernetes", icon: <SiKubernetes />, percentage: 55 },
   { name: "Google Cloud", icon: <FaGoogle />, percentage: 50 },
   { name: "SQL", icon: <SiMysql />, percentage: 75 },
   { name: "PostgreSQL", icon: <SiPostgresql />, percentage: 70 },
-  { name: "HTML", icon: <FaHtml5 />, percentage: 85 },
-  { name: "CSS", icon: <FaCss3Alt />, percentage: 80 },
+  { name: "HTML", icon: <FaHtml5 />, percentage: 100 },
+  { name: "CSS", icon: <FaCss3Alt />, percentage: 100 },
 ];
 
 export default function Portfolio() {
