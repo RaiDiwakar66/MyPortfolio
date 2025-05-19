@@ -32,6 +32,7 @@ import GenerativeAI from "./assets/GenerativeAI.jpg"
 import BachelorDegree from "./assets/BachelorDegree.png"
 import InProgress from "./assets/Workinprogress.jpg"
 import CalculatorWeb from "./assets/Calculator.png"
+import ClosetSystem from "./assets/ClosetSystem.png"
 
 const projects = [
   {
@@ -48,7 +49,7 @@ const projects = [
       "Java full-stack application with PostgreSQL and real-time weather API for personalized outfit suggestions.",
     tech: ["Java", "PostgreSQL", "RESTful APIs","JavaScript", "React JS","OpenWeatherMap API"],
     github: "https://github.com/DkGoat66/Closet2.0",
-    image: InProgress
+    image: ClosetSystem
   },
   {
     title: "Flashback Memory",
