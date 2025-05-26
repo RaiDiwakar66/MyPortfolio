@@ -326,6 +326,12 @@ export default function Portfolio() {
             <h3 className="text-xl font-semibold text-green-800">CompTia A+</h3>
             <p className="text-sm text-gray-700 mt-2"></p>
           </div>
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+            <img src={InProgress} alt="Work In Progress" className="w-full h-48 object-contain mb-4"/>
+            <h3 className="text-xl font-semibold text-green-800">Master of Science in CyberSecurity</h3>
+            <p className="text-sm text-gray-700 mt-2"></p>
+          </div>
+
         </div>
       </section> 
 
